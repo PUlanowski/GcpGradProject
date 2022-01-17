@@ -2,3 +2,6 @@ config.properties
 send_to_pubsub.py
 tweet_producer.py
 __pycache__/
+sample_tweet.json
+test_stuff.py
+gcp_sentiment_architecture.png

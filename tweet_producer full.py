@@ -1,5 +1,12 @@
 # Config
 
+consumer_key = 'TSpnym2FzM9XJ7y1in4ZUVoCa'
+consumer_secret = 'EIJ1WqdLbEUmQ1MJ4AGWu4HdHn4kggCo93e2c0uX2NCcwF7XcF'
+access_token ='1481340244050038787-8GC2B5Lh9z26oBN2xmUkNKNpLISwk7'
+access_token_secret = 'yj5iQvjKJ3Oe52cpR7NVOQ2kvR1d9aiLsBtA5G3CQuNCT'
+bearer_token = 'AAAAAAAAAAAAAAAAAAAAAA4qYAEAAAAAaE65KbiIHt4DFhxkoluCYwYAsSs%3DrDPABQkoH3DoKxDgg8wx5h7o7zz5NmepHlXa4LKEgAxvugXUlG'
+project_id = 'piotr-ulanowski-sandbox-1'
+topic_path = 'projects/piotr-ulanowski-sandbox-1/topics/twitt_stream'
 
 
 from urllib import response
@@ -58,15 +65,10 @@ def delete_all_rules(rules):
 def set_rules(delete):
     # You can adjust the rules if needed
     sample_rules = [
-        {
-            "value": "#crypto (happy OR exciting OR excited OR favorite OR fav OR amazing OR lovely OR incredible) -horrible -worst -sucks -bad -disappointing",
-            "tag": "#crypto positive"
-        },
-        {
-            "value": "#crypto (horrible OR worst OR sucks OR bad OR disappointing) -happy -exciting -excited -favorite -fav -amazing -lovely -incredible",
-            "tag": "#crypto negative"
-        }
+        {"value": "#Trump lang:en", "tag": "#trump"},
+        {"value": "#Biden lang:en", "tag": "#biden"}
     ]
+    
     payload = {"add": sample_rules}
     response = requests.post(
         "https://api.twitter.com/2/tweets/search/stream/rules",
@@ -103,7 +105,6 @@ def publish_pubsub(response):
             one_tweet = str(response_line)
             json_response = json.loads(response_line)
             future = publisher.publish(topic_path, one_tweet.encode('utf-8'))
-            json_response = json.loads(response_line)
             print(f'PUBLISHED MESSAGE ID: {future.result()}')
             print(json.dumps(json_response, indent=4, sort_keys=True))
 
