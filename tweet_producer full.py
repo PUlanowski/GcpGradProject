@@ -1,12 +1,4 @@
-# Config
-
-consumer_key = 'TSpnym2FzM9XJ7y1in4ZUVoCa'
-consumer_secret = 'EIJ1WqdLbEUmQ1MJ4AGWu4HdHn4kggCo93e2c0uX2NCcwF7XcF'
-access_token ='1481340244050038787-8GC2B5Lh9z26oBN2xmUkNKNpLISwk7'
-access_token_secret = 'yj5iQvjKJ3Oe52cpR7NVOQ2kvR1d9aiLsBtA5G3CQuNCT'
-bearer_token = 'AAAAAAAAAAAAAAAAAAAAAA4qYAEAAAAAaE65KbiIHt4DFhxkoluCYwYAsSs%3DrDPABQkoH3DoKxDgg8wx5h7o7zz5NmepHlXa4LKEgAxvugXUlG'
-project_id = 'piotr-ulanowski-sandbox-1'
-topic_path = 'projects/piotr-ulanowski-sandbox-1/topics/twitt_stream'
+# Config here
 
 
 from urllib import response
