@@ -1,0 +1,101 @@
+//tweets_raw
+[
+    {
+        "name": "tweet_id",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "tweet_created_at",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    }, 
+    {
+        "name": "tweet_lang",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    }, 
+    {
+        "name": "tweet_text",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    }, 
+    {
+        "name": "usr_descr",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    }, 
+    {
+        "name": "usr_id",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    }, 
+    {
+        "name": "usr_name",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },   
+    {
+        "name": "usr_username",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },   
+    {
+        "name": "tag",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    }
+]
+
+//tweets_processed
+[
+    {
+        "name": "tweet_id",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "tag",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "tweet_text",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "tweet_year",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "tweet_month",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "tweet_day",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+    }
+]
+
+//tweets_sentiment
+[
+    {
+        "name": "tweet_id",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "sentiment_score",
+        "type": "FLOAT",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "sentiment_magnitude",
+        "type": "FLOAT",
+        "mode": "NULLABLE"
+    }
+]
