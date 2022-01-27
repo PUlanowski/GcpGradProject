@@ -1,4 +1,3 @@
-[Top](#Top)
 # GCP Big Data Project
 <!-- vscode-markdown-toc -->
 * 1. [Project goal](#Projectgoal)
@@ -28,7 +27,7 @@
 <div style="text-align: justify">
 This project goal was to create serverless, highly scalable and easy to implement and maintain streaming processor based on GCP platform. Apart from native GCP services external google/vendor services were uses (DataPrep and DataStudio). For Infrastructure as Code Terraform scripts were used. To orchestrate flow Python scripts were implemented and run from Cloud Shell environment. Given complexity of project some solutions were chosen due to business goals setup (see: Business Goals section. For project stack please refer to Project Stack section.
 </div>
-<a name='Start'><small>top</small></a>
+
 
 ##  2. <a name='Businessgoal'></a>Business goal
 <div style="text-align: justify">
@@ -40,7 +39,7 @@ We are Data Engineer in marketing-analytical startup that can possibly be involv
 Startup decide to use GCP as platform of choice due to well known Data Processing abilities and their famous BigQuery. This was essential since Data Team knows SQL well. Company decide also that solution should maintain lowest cost possible during Proof of Concept phase. Startup also wants solution to be simple to deploy and scalable in the future. In the best case it should not engage DevOps team too much so should be least infrastructure to maintain.
 </div>
 
-<a name='Start'><small>top</small></a>
+
 
 ##  3. <a name='Projectarchitecture'></a>Project architecture
 <div style="text-align: justify">
@@ -49,7 +48,7 @@ Project architecture has modular form from which we can distinguish major parts 
 
 ![](gcp_tweets_sentiment_architecture.png)
 
-<a name='Start'><small>top</small></a>
+
 
 ##  4. <a name='Projecttechnologystack'></a>Project technology stack
 <div style="text-align: justify">
@@ -97,7 +96,7 @@ Pub/Sub is used for streaming analytics and data integration pipelines to ingest
 
 <span style = "background-color: #ABBAFF">Assumption: all scripts are run from within Cloud Shell where user is fully logged in and have all permissions already set up. Another way would be setting up a [service account](https://cloud.google.com/compute/docs/access/service-accounts) and generate access key which in some cases is prohibited (e.g. using own company landing zones).</span>
 
-<a name='Start'><small>top</small></a>
+
 
 ##  5. <a name='Terraforming'></a>Terraforming
 <div style="text-align: justify">
@@ -137,7 +136,7 @@ resource "null_resource" "health_check" {
 - configure dependencies between components so they are creates in right order
 </div>
 
-<a name='Start'><small>top</small></a>
+
 
 ##  6. <a name='Twitterstreamprocessing'></a>Twitter stream processing
 <div style="text-align: justify">
@@ -201,7 +200,7 @@ if get_vals(tweet_proc, 'id')[0] != prev_tweet_id:
 ```
 </div>
 
-<a name='Start'><small>top</small></a>
+
 
 ##  7. <a name='GCPpipeline'></a>GCP pipeline
 
@@ -262,7 +261,7 @@ This script has also simple scheduler to loop execution in given time frame. For
 
 </div>
 
-<a name='Start'><small>top</small></a>
+
 
 ##  8. <a name='Finalnotes'></a>Final notes
 
