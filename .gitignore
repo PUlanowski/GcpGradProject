@@ -4,4 +4,6 @@ tweet_producer.py
 __pycache__/
 sample_tweet.json
 test_stuff.py
-gcp_sentiment_architecture.png
+flow_preprocessing-tweets-raw.zip
+misc/
+.vscode/
