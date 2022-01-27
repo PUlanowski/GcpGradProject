@@ -31,7 +31,7 @@ This project goal was to create serverless, highly scalable and easy to implemen
 
 ##  2. <a name='Businessgoal'></a>Business goal
 <div style="text-align: justify">
-For simulate real-life scenario business goal was defined.<br>
+To simulate real-life scenario business goal was defined.<br>
 We are Data Engineer in marketing-analytical startup that can possibly be involved in US Presidential election 2024. To prove we can handle this task, we need to provide deep insight into social media buzz regarding possible two major candidates: D. Trump & J. Biden. Medium of choice we decided to be Twitter due to scale and involvement in previous election affairs. Different departments of startup contribute to this project:<br>
 - Sales department want to have current information about media buzz and see which candidate is more popular to present their manipulations result to client <br>
 - Marketing department wants some solution that will define sentiment of messages that flow in Twitter under both Presidents tags. They will use it to monitor startup PR efforts<br>
@@ -59,29 +59,29 @@ Google Cloud Platform provides infrastructure as a service, platform as a servic
 2. [Terraform](https://www.terraform.io) - Terraform is an open-source infrastructure as code software tool that provides a consistent CLI workflow to manage hundreds of cloud services. Terraform codifies cloud APIs into declarative configuration files.
 <br>
 3. [GCP - Cloud shell](https://cloud.google.com/shell/) - Cloud Shell is an online development and operations environment accessible anywhere with your browser. You can manage your resources with its online terminal preloaded with utilities such as the gcloud command-line tool, kubectl, and more. You can also develop, build, debug, and deploy your cloud-based apps using the online Cloud Shell Editor.
-<span style = "background-color: #ABBAFF">Because Cloud Shell exist in GCP ecosystem it has some advantages regarding to credentials vs using SDK on on-prem machine.</span>
+<br><span style = "background-color: #ABBAFF">Because Cloud Shell exist in GCP ecosystem it has some advantages regarding to credentials vs using SDK on on-prem machine.</span>
 <br>
 4. [Python](https://www.python.org/) - Python is an interpreted high-level general-purpose programming language. Its design philosophy emphasizes code readability with its use of significant indentation. Its language constructs as well as its object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects
-<span style = "background-color: #ABBAFF">In this project Python is used as connector, orchestrator ans scheduler. Essentially as front-end to tap into multiple APIs.</span>
+<br><span style = "background-color: #ABBAFF">In this project Python is used as connector, orchestrator ans scheduler. Essentially as front-end to tap into multiple APIs.</span>
 <br>
 5. [GCP - PubSub](https://cloud.google.com/pubsub/docs/overview) - Pub/Sub, which stands for Publisher/Subscriber, allows services to communicate asynchronously, with latencies on the order of 100 milliseconds.
 Pub/Sub is used for streaming analytics and data integration pipelines to ingest and distribute data. It is equally effective as messaging-oriented middleware for service integration or as a queue to parallelize tasks.
-<span style = "background-color: #ABBAFF">In this project Pub/Sub ingest tweeter stream.</span>
+<br><span style = "background-color: #ABBAFF">In this project Pub/Sub ingest tweeter stream.</span>
 <br>
 6. [GCP - DataFlow](https://cloud.google.com/dataflow/) - Dataflow is a fully managed service for executing Apache Beam pipelines within the Google Cloud Platform ecosystem. Dataflow jobs are billed per second, based on the actual use of Dataflow batch or streaming workers. Additional resources, such as Cloud Storage or Pub/Sub, are each billed per that service’s pricing.
-<span style = "background-color: #ABBAFF">In this project Dataflow was chosen as a cost friendly solution that can handle flow to archiving tweets and populating BigQuery Table.</span>
+<br><span style = "background-color: #ABBAFF">In this project Dataflow was chosen as a cost friendly solution that can handle flow to archiving tweets and populating BigQuery Table.</span>
 <br>
 7. [GCP - BigQuery](https://cloud.google.com/bigquery/) - BigQuery is a fully-managed, serverless data warehouse that enables scalable analysis over petabytes of data. It is a Platform as a Service that supports querying using ANSI SQL. It also has built-in machine learning capabilities.
-<span style = "background-color: #ABBAFF">In this project Big Query handle data storage in tabular form and querying right data parts. Also it provides data for both semi-external services DataPrep & DataStudio.</span>
+<br><span style = "background-color: #ABBAFF">In this project Big Query handle data storage in tabular form and querying right data parts. Also it provides data for both semi-external services DataPrep & DataStudio.</span>
 <br>
 8. [GCP - Cloud Storage](https://cloud.google.com/storage/) - Google Cloud storage is a part of the Google Cloud Platform, which aims to be a competitor to Amazon S3 and Amazon Web Services (AWS) as well as other big names in the market such as Microsoft. It focuses on the development and deployment of modern web applications. Aimed at companies of all sizes, Google Cloud offers object storage with no limits on the amount of data stored or the size of objects. Google promises low latency and high durability for its service, and data can be stored in locations around the world. What’s more, it can be accessed via the command line or through a web browser.
-<span style = "background-color: #ABBAFF">In this project Cloud Storage is used for archiving tweets in AVRO format.</span>
+<br><span style = "background-color: #ABBAFF">In this project Cloud Storage is used for archiving tweets in AVRO format.</span>
 <br>
 9. [GCP - Cloud Natural Language API](https://cloud.google.com/natural-language/) - The powerful pre-trained models of the Natural Language API empowers developers to easily apply natural language understanding (NLU) to their applications with features including sentiment analysis, entity analysis, entity sentiment analysis, content classification, and syntax analysis.
-<span style = "background-color: #ABBAFF">In this project Natural LAnguage API is used to analyze and deliver tweet sentiment and magnitude of all streamed tweets.</span>
+<br><span style = "background-color: #ABBAFF">In this project Natural LAnguage API is used to analyze and deliver tweet sentiment and magnitude of all streamed tweets.</span>
 <br>
 10. [DataPrep](https://cloud.google.com/dataprep/) - Dataprep by Trifacta is an intelligent data service for visually exploring, cleaning, and preparing structured and unstructured data for analysis, reporting, and machine learning. Because Dataprep is serverless and works at any scale, there is no infrastructure to deploy or manage. Your next ideal data transformation is suggested and predicted with each UI input, so you don’t have to write code.
-<span style = "background-color: #ABBAFF">In this project DataPrep is used to initial clean tweets before sending to NL API and in mind of future usage of non-technical employees of startup who wants to produce tables not worrying about much technicalities.</span>
+<br><span style = "background-color: #ABBAFF">In this project DataPrep is used to initial clean tweets before sending to NL API and in mind of future usage of non-technical employees of startup who wants to produce tables not worrying about much technicalities.</span>
 <br>
 11. [DataStudio](https://datastudio.google.com) - Data Studio is Google's free data visualization tool that allows you to:
 - Visualize your data through highly configurable charts and tables.
@@ -89,12 +89,12 @@ Pub/Sub is used for streaming analytics and data integration pipelines to ingest
 - Share your insights with your team or with the world.
 - Collaborate on reports with your team.
  - Create reports even faster with built-in sample reports and community visualizations
-<span style = "background-color: #ABBAFF">In this project DataStudio is used as an example of generating BigQuery originating report and chart.</span>
+<br><span style = "background-color: #ABBAFF">In this project DataStudio is used as an example of generating BigQuery originating report and chart.</span>
 </dev>
 
 # Project flow (incl. sample code and screenshots)
 
-<span style = "background-color: #ABBAFF">Assumption: all scripts are run from within Cloud Shell where user is fully logged in and have all permissions already set up. Another way would be setting up a [service account](https://cloud.google.com/compute/docs/access/service-accounts) and generate access key which in some cases is prohibited (e.g. using own company landing zones).</span>
+<br><span style = "background-color: #ABBAFF">Assumption: all scripts are run from within Cloud Shell where user is fully logged in and have all permissions already set up. Another way would be setting up a [service account](https://cloud.google.com/compute/docs/access/service-accounts) and generate access key which in some cases is prohibited (e.g. using own company landing zones).</span>
 
 
 
@@ -189,7 +189,7 @@ we're using pubsub_v1 module from google.cloud.
 
 6. Tweet stream now flows to our PubSub topic and populates subscription we've created.
 
-<span style = "background-color: #ABBAFF">Twitter free API sometimes provide inconsistent stream (this is in ToC also) which results in streaming duplicates, that may cause downstream issues. Because duplicates comes one after another, we use simple trick to filter them out just before we parse them into PubSub.</span>
+<br><span style = "background-color: #ABBAFF">Twitter free API sometimes provide inconsistent stream (this is in ToC also) which results in streaming duplicates, that may cause downstream issues. Because duplicates comes one after another, we use simple trick to filter them out just before we parse them into PubSub.</span>
 ```python
 if get_vals(tweet_proc, 'id')[0] != prev_tweet_id:
             future = publisher.publish(topic_path, encoded_tweet)
@@ -252,8 +252,8 @@ c) we extract correct fields that we will then pass as an argument to SQL query 
 ```sql
 INSERT INTO `piotr-ulanowski-sandbox-1.tweet_sentiment.tweets_sentiment`(tweet_id,sentiment_score, sentiment_magnitude) VALUES ('{}', {}, {}).format(tweet_id,sentiment_score,sentiment_magnitude)
 ```
-<span style = "background-color: #ABBAFF">Despite ID is recognized as a string, query was still passing int thus we had to wrap {} in ''</span>
-<span style = "background-color: #ABBAFF">Populating table could be done another way using pandas DataFrame and invoking special BQ method but for testing purposes one-by-one was sufficient.</span>
+<br><span style = "background-color: #ABBAFF">Despite ID is recognized as a string, query was still passing int thus we had to wrap {} in ''</span>
+<br><span style = "background-color: #ABBAFF">Populating table could be done another way using pandas DataFrame and invoking special BQ method but for testing purposes one-by-one was sufficient.</span>
 
 This script has also simple scheduler to loop execution in given time frame. For testing we've used seconds but in production it would be more aligned with DataFlow time frames (5 minutes or more).
 
