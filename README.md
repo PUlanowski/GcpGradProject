@@ -112,9 +112,10 @@ Pub/Sub is used for streaming analytics and data integration pipelines to ingest
 <div style="text-align: justify">
 
 ###  5.1. <a name='RepoStructure'></a>Repo Structure
-/tf
-|-- main.tf
-|-- variables.tf
+/tf<br>
+|-- main.tf<br>
+|-- variables.tf<br>
+<br>
 
 ###  5.2. <a name='Logic'></a>Logic
 1. Terraform script is invoked within Cloud Shell (in folder where .tf files are).
@@ -152,12 +153,12 @@ resource "null_resource" "health_check" {
 <div style="text-align: justify">
 
 ###  6.1. <a name='RepoStructure-1'></a>Repo Structure
-/src
-|-- architecture_diag.py
-|-- IaC.sh
-|-- sentiment_processor.py
-|-- tweet_producer_full.py
-
+/src<br>
+|-- architecture_diag.py<br>
+|-- IaC.sh<br>
+|-- sentiment_processor.py<br>
+|-- tweet_producer_full.py<br>
+<br>
 ###  6.2. <a name='Logic-1'></a>Logic
 1. To get Twitter stream we need to have Twitter developer account and generate Bearer token as authorisation method. Popular python library didn't work in this case (due to type of dev acct and limitations of API available) thus connecting to stream was done via requests
 2. Decided was to filter out streams we need to analyze so additional requests were sent to appropriate endpoints to get current rules, delete all rules if any exists and setup a new set. we were interested in main tags of #trump and #biden.
