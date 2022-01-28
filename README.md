@@ -236,7 +236,7 @@ b) process tweets and send to BigQuery table <span style = "background-color: #A
 Those are both streaming types of jobs which means we need to manually stop them if needed (e.g. for testing purposes). Here we have either Cancel option which will close processing immediately or Drain which will stop ingestion of tweets and process what's in queue.
 In case we incorrectly define BQ schema, new table with error entries will be created. This is very useful during debugging process.
 
-1. DataPrep is user friendly Data engine that can also be based on DataFlow (Apache Beam) depending which we choose for processing. We import BQ table we need and prepare transformations (called recipes) that are middle step between ingestion and saving to final table. Preparing recipe is very easy so non-technical employees would be able to manage that after short tutorial. For NLP sake we remove all unnecessary characters and save some of columns for further processing to new BQ table <span style = "background-color: #ABBAFF">(tweets_processed)</span>.
+3. DataPrep is user friendly Data engine that can also be based on DataFlow (Apache Beam) depending which we choose for processing. We import BQ table we need and prepare transformations (called recipes) that are middle step between ingestion and saving to final table. Preparing recipe is very easy so non-technical employees would be able to manage that after short tutorial. For NLP sake we remove all unnecessary characters and save some of columns for further processing to new BQ table <span style = "background-color: #ABBAFF">(tweets_processed)</span>.
 
 ![](/screenshots/dp.png)
 
